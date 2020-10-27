@@ -1,0 +1,28 @@
+<snippet>
+    <content><![CDATA[
+module.exports = {
+    id: "irut",
+    name: "",
+    description: "",
+    ocdDataSpec: {
+        ____types: "jsObject",
+        ____defaultValue: {},
+    },
+    steps: {
+        unitialized: {
+            description: "Default starting step",
+            transitions: [],
+            actions: {
+                enter: [],
+                exit: []
+            }
+        }
+    }
+};
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>hello</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

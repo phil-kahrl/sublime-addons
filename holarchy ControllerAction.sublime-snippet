@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+module.exports = {
+    id: "${1:irut}",
+    name: "${2:name}",
+    description: "${3:description}",
+    actionRequestSpec: {
+        ____opaque: true
+    },
+    actionResultSpec: {
+        ____opaque: true
+    },
+    bodyFunction: ({context, actionRequest}) => {
+        return {result: undefined}
+    }
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>hello</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
