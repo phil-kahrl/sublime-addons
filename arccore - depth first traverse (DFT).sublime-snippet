@@ -1,0 +1,53 @@
+<snippet>
+    <content><![CDATA[
+    /**
+        arccore graph dft with common callback methods.
+        https://encapsule.io/docs/ARCcore/graph/algorithms/digraph-dft
+    **/
+
+    const discoverVertex = ({u, g}) => {
+        console.log("discoverVertex: " + JSON.stringify(u));
+        return true;
+    };
+
+    const finishVertex = ({u, g}) => {
+        console.log("finishVertex: " + JSON.stringify(u));
+        return true;
+    };
+
+    const treeEdge = ({e, g}) => {
+        console.log("treeEdge: " + JSON.stringify(e));
+        return true;
+    };
+
+    const backEdge = ({e, g}) => {
+        console.log("backEdge: " + JSON.stringify(e));
+        return true;
+    };
+
+    forwardOrCrossEdge = ({e, g}) => {
+        console.log("forwardOrCrossEdge: " + JSON.stringify(e));
+        return true;
+    };
+
+    let dftResponse = arccore.graph.directed.depthFirstTraverse({
+        digraph,
+        visitor: {
+            discoverVertex,
+            finishVertex,
+            treeEdge,
+            backEdge,
+            forwardOrCrossEdge
+
+        }
+    });
+
+    if (dftResponse.error) {
+        console.log(dftResponse.error);
+    } else {
+        console.log(dftResponse.result);
+    }
+]]></content>
+
+
+</snippet>
