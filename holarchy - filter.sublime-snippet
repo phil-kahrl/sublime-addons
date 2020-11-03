@@ -3,7 +3,7 @@
 const arccore = require("@encapsule/arccore");
 
 const factoryResponse= arccore.filter.create({
-    operationID: "",
+    operationID: "demo", //TODO replace with 22 character IRUT
     operationName: "",
     operationDescription: "",
     inputFilterSpec: {

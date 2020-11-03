@@ -1,9 +1,9 @@
 <snippet>
     <content><![CDATA[
 module.exports = {
-    id: "${1:irut}",
-    name: "${2:name}",
-    description: "${3:description}",
+    id: "demo", //replace with 22 character IRUT
+    name: "${1:name}",
+    description: "${2:description}",
     actionRequestSpec: {
         ____opaque: true
     },

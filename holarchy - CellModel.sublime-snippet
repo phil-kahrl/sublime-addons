@@ -3,7 +3,7 @@
 const holarchy = require("@encapsule/holarchy");
 
 module.exports = new holarchy.CellModel({
-    id: "irut",
+    id: "demo", //TODO replace with 22 character IRUT
     name: "",
     description: "",
     apm: {}
