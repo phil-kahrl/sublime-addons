@@ -1,0 +1,38 @@
+const httpServiceFilterFactory = require("@encapsule/holism").service;
+
+let factoryResponse = httpServiceFilterFactory.create({
+    id: "demo", //TODO replace with 22 character IRUT
+    name: "Service Filter Name",
+    description: "A sample of a service filter that returns JSON as content.",
+    constraints: {
+        request: {
+            content: { encoding: "utf8", type: "text/plain" },
+            query_spec: { ____opaque: true },
+            request_spec: { ____opaque: true },
+            options_spec: { ____opaque: true }
+        },
+        response: {
+            content: { encoding: "utf8", type: "application/json" },
+            error_context_spec: { ____opaque: true },
+            result_spec: { ____opaque: true }
+        }
+    },
+    handlers: {
+        request_handler: (request_) => {
+            request_.response_filters.result.request({
+                streams: request_.streams,
+                integrations: request_.integrations,
+                request_descriptor: request_.request_descriptor,
+                response_descriptor: {
+                    http: { code: 200 },
+                    content: { encoding: "utf8", type: "application/json" },
+                    data: {foo: "bar"}
+                }
+            });
+            return {result: undefined}
+        }
+    }
+});
+
+if (factoryResponse.error) throw new Error(factoryResponse.error);
+const demoJSONServiceFilter = factoryResponse.result;
