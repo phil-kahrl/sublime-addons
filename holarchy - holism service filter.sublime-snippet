@@ -3,7 +3,7 @@
 const httpServiceFilterFactory = require("@encapsule/holism").service;
 
 let factoryResponse = httpServiceFilterFactory.create({
-    id: "TxTaBMnjRAGUkRuf7rwUlg",
+    id: "demo", //TODO replace with 22 character IRUT
     name: "Demo JSON service filter",
     description: "A sample of a service filter that returns JSON as content.",
     constraints: {
