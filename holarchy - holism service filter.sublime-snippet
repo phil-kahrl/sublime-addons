@@ -1,8 +1,10 @@
+<snippet>
+    <content><![CDATA[
 const httpServiceFilterFactory = require("@encapsule/holism").service;
 
 let factoryResponse = httpServiceFilterFactory.create({
-    id: "demo", //TODO replace with 22 character IRUT
-    name: "Service Filter Name",
+    id: "TxTaBMnjRAGUkRuf7rwUlg",
+    name: "Demo JSON service filter",
     description: "A sample of a service filter that returns JSON as content.",
     constraints: {
         request: {
@@ -36,3 +38,5 @@ let factoryResponse = httpServiceFilterFactory.create({
 
 if (factoryResponse.error) throw new Error(factoryResponse.error);
 const demoJSONServiceFilter = factoryResponse.result;
+]]></content>
+</snippet>
