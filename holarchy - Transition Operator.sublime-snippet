@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+const TransitionOperator = require("@encapsule/holarchy").TransitionOperator;
+
+module.exports = new TransitionOperator({
+    id: "demo", // TODO replace with 22 character IRUT
+    name: "Demo Transition Operator",
+    description: "A sample transition operator to demonstrate the pattern.",
+    operatorRequestSpec: {
+        ____types: "jsObject",
+        demoTranstion: {
+            ____accept: "jsObject",
+        }
+    },
+    bodyFunction: ({operatorRequest, context}) => {
+        return {result: true}
+    }
+});
+]]></content>
+</snippet>
