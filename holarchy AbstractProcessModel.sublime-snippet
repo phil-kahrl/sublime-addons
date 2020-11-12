@@ -9,7 +9,7 @@ module.exports = {
         ____defaultValue: {},
     },
     steps: {
-        unitialized: {
+        uninitialized: {
             description: "Default starting step",
             transitions: [],
             actions: {
